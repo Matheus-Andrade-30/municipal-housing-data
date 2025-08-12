@@ -7,7 +7,7 @@ def limpar_colunas(df):
     df.columns = [col.strip().lower().replace(" ", "_") for col in df.columns]
     return df
 
-def dados_limpos(df: pd.DataFrame) -> pd.DataFrame:
+def dados_limpos_Total(df: pd.DataFrame) -> pd.DataFrame:
     df = df[df["Região"] != "Brasil"]
 
     novos_nomes = [
