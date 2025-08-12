@@ -57,7 +57,8 @@ def dados_limpos_Situacao(df: pd.DataFrame) -> pd.DataFrame:
             .str.replace('.', '', regex=False)
             .str.replace(',', '.', regex=False)
         )
-    df[col] = pd.to_numeric(df[col], errors='coerce')
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+        
     df['onus'] = df['onus'].fillna(0)
 
     df['deficit_total'] = df['habitacao_precaria'] + df['coabitacao'] + df['onus']
