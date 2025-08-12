@@ -1,4 +1,4 @@
-# Análise do Déficit Habitacional Municipal no Brasil 🏘️
+# Análise do Déficit Habitacional no Brasil 🏘️
 
 Este projeto tem como objetivo analisar dados públicos relacionados ao déficit habitacional nas regiões brasileiras, utilizando Python e bibliotecas de ciência de dados.
 
