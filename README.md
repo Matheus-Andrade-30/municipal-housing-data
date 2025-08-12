@@ -6,7 +6,6 @@ Este projeto tem como objetivo analisar dados públicos relacionados ao déficit
 - Coletar e tratar grandes bancos de dados administrativos públicos
 - Explorar dados habitacionais por UF, região e município
 - Gerar visualizações e relatórios que ajudem a compreender o cenário nacional
-- (Opcional) Visualizar os dados geograficamente com mapas
 
 ## 🛠️ Tecnologias
 - Python, pandas, matplotlib, seaborn, geopandas
@@ -18,9 +17,3 @@ Este projeto tem como objetivo analisar dados públicos relacionados ao déficit
 - `notebooks/`: Etapas do projeto em Jupyter
 - `src/`: Scripts reutilizáveis de limpeza e visualização
 - `reports/`: Resultados finais (Excel, gráficos, etc.)
-
-## 📊 Resultado Final
-Em construção. Em breve será disponibilizado um relatório com insights e mapa interativo.
-
-## 📄 Licença
-MIT
