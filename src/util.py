@@ -141,3 +141,45 @@ def dados_limpos_Faixa_De_Renda(df: pd.DataFrame) -> pd.DataFrame:
     df_brasil = df[df['regiao'] == 'Brasil'].copy()
 
     return df_regioes, df_brasil
+
+def dados_limpos_Cor_Raca(df: pd.DataFrame) -> pd.DataFrame:
+    df.rename(columns={
+    'Regiao' : 'regiao',
+    'Cor/Raça' : 'cor_raca',
+    'Domicílios Rústicos' : 'domicilios_rusticos',
+    'Domicílios Improvisados' : 'domicilios_improvisados',
+    'Habitação Precária' : 'habitacao_precaria',
+    'Cômodos' : 'comodos',
+    'Unidades conviventes déficit' : 'unidades_conviventes_deficit',
+    'Coabitação' : 'coabitacao',
+    'Ônus' : 'onus',
+    'Déficit Habitacional (Habitação Precária + Coabitação + Ônus)' : 'deficit_original'
+    }, inplace=True)
+
+    colunas_excluir = ["regiao", "cor_raca", 'N']
+
+    colunas_converter = [col for col in df.columns if col not in colunas_excluir]
+
+    for col in colunas_converter:
+        df[col] = (
+            df[col]
+            .astype(str).
+            str.replace('.', '', regex=False)
+            .str.replace(',', '.', regex=False)
+        )
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+    if 'N' in df.columns:
+        df.rename(columns={'N': 'id_regiao'}, inplace=True)
+
+    df['id_regiao'].fillna(method='ffill', inplace=True)
+
+    df['id_regiao'] = df['id_regiao'].astype(int)
+
+    df['deficit_total'] = df['habitacao_precaria'] + df['coabitacao'] + df['onus']
+    df.drop(columns=['id_regiao', 'deficit_original'], inplace=True)
+
+    df_regioes = df[df['regiao'] != 'Brasil'].copy()
+    df_brasil = df[df['regiao'] == 'Brasil'].copy()
+
+    return df_regioes, df_brasil
