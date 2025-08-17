@@ -24,7 +24,7 @@ A análise revelou padrões claros e impactantes:
 
 *Este gráfico mostra como o 'Ônus com Aluguel' é o principal componente para mulheres, enquanto outros fatores são mais distribuídos para os homens.*
 
-![Gráfico de barras empilhadas mostrando a composição do déficit habitacional por sexo no Brasil](../../reports/images/grafico_deficit_por_sexo.png)
+![Gráfico de barras empilhadas mostrando a composição do déficit habitacional por sexo no Brasil](./reports/images/grafico_deficit_por_sexo.png)
 
 ---
 
@@ -32,7 +32,7 @@ A análise revelou padrões claros e impactantes:
 
 *A análise regional revela como a "face" do déficit muda, sendo majoritariamente parda no Nordeste e branca no Sul, refletindo demografia e desigualdade.*
 
-![Gráfico de barras 100% empilhadas mostrando a composição racial do déficit para cada região do Brasil](../../reports/images/composicao_racial_deficit_regioes.png)
+![Gráfico de barras 100% empilhadas mostrando a composição racial do déficit para cada região do Brasil](./reports/images/composicao_racial_deficit_regioes.png)
 
 ## 🛠️ Tecnologias
 - Python, pandas, matplotlib, seaborn
@@ -51,8 +51,8 @@ Para replicar esta análise, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/Matheus-Andrade-30/municipal-housing-data.git)
+    cd municipal-housing-data
     ```
 
 2.  **Crie e ative um ambiente virtual:**
