@@ -51,7 +51,7 @@ Para replicar esta análise, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/Matheus-Andrade-30/municipal-housing-data.git)
+    git clone [https://github.com/Matheus-Andrade-30/municipal-housing-data.git](https://github.com/Matheus-Andrade-30/municipal-housing-data.git)
     cd municipal-housing-data
     ```
 
